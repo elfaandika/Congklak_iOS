@@ -3,27 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F959EF68C108BB70AFB571C /* Pods_CongklakIndonesiaGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBC9C8B596F1D7612C1A2D8 /* Pods_CongklakIndonesiaGame.framework */; };
+		E169633125D545730027164E /* SlotCongklakPlayer2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E169633025D545730027164E /* SlotCongklakPlayer2.swift */; };
+		E169634525D56FCA0027164E /* CongklakModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E169634425D56FCA0027164E /* CongklakModel.swift */; };
+		E169634D25D5705B0027164E /* CongklakPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E169634C25D5705B0027164E /* CongklakPresenter.swift */; };
+		E169635025D677210027164E /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E169634F25D677210027164E /* GameResult.swift */; };
+		E169635325D679920027164E /* WinAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = E169635225D679920027164E /* WinAnimation.json */; };
+		E182B2CC25D52F420091FCA9 /* SlotCongklakPlayer1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E182B2CB25D52F420091FCA9 /* SlotCongklakPlayer1.swift */; };
 		E1C69FED25D3E58100571ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C69FEC25D3E58100571ED3 /* AppDelegate.swift */; };
 		E1C69FEF25D3E58100571ED3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C69FEE25D3E58100571ED3 /* SceneDelegate.swift */; };
-		E1C69FF125D3E58100571ED3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C69FF025D3E58100571ED3 /* ViewController.swift */; };
+		E1C69FF125D3E58100571ED3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C69FF025D3E58100571ED3 /* LaunchViewController.swift */; };
 		E1C69FF425D3E58100571ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1C69FF225D3E58100571ED3 /* Main.storyboard */; };
 		E1C69FF625D3E58300571ED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1C69FF525D3E58300571ED3 /* Assets.xcassets */; };
 		E1C69FF925D3E58300571ED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1C69FF725D3E58300571ED3 /* LaunchScreen.storyboard */; };
+		E1EAB2CF25D3F516006C1C2A /* LaunchAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = E1EAB2CC25D3F516006C1C2A /* LaunchAnimation.json */; };
+		E1EAB2EA25D44CB0006C1C2A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB2E925D44CB0006C1C2A /* HomeViewController.swift */; };
+		E1EAB2ED25D44CC2006C1C2A /* CongklakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB2EC25D44CC2006C1C2A /* CongklakViewController.swift */; };
+		E1EAB2F525D45193006C1C2A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB2F425D45193006C1C2A /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C3C4F5A1A001EA63C85AE39 /* Pods-CongklakIndonesiaGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongklakIndonesiaGame.debug.xcconfig"; path = "Target Support Files/Pods-CongklakIndonesiaGame/Pods-CongklakIndonesiaGame.debug.xcconfig"; sourceTree = "<group>"; };
+		4B58FC5442F591C12C9FC55C /* Pods-CongklakIndonesiaGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongklakIndonesiaGame.release.xcconfig"; path = "Target Support Files/Pods-CongklakIndonesiaGame/Pods-CongklakIndonesiaGame.release.xcconfig"; sourceTree = "<group>"; };
+		4CBC9C8B596F1D7612C1A2D8 /* Pods_CongklakIndonesiaGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CongklakIndonesiaGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E169633025D545730027164E /* SlotCongklakPlayer2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotCongklakPlayer2.swift; sourceTree = "<group>"; };
+		E169634425D56FCA0027164E /* CongklakModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongklakModel.swift; sourceTree = "<group>"; };
+		E169634C25D5705B0027164E /* CongklakPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongklakPresenter.swift; sourceTree = "<group>"; };
+		E169634F25D677210027164E /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
+		E169635225D679920027164E /* WinAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WinAnimation.json; sourceTree = "<group>"; };
+		E182B2CB25D52F420091FCA9 /* SlotCongklakPlayer1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotCongklakPlayer1.swift; sourceTree = "<group>"; };
 		E1C69FE925D3E58100571ED3 /* CongklakIndonesiaGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CongklakIndonesiaGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1C69FEC25D3E58100571ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1C69FEE25D3E58100571ED3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E1C69FF025D3E58100571ED3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1C69FF025D3E58100571ED3 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		E1C69FF325D3E58100571ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1C69FF525D3E58300571ED3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1C69FF825D3E58300571ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1C69FFA25D3E58300571ED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1EAB2CC25D3F516006C1C2A /* LaunchAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LaunchAnimation.json; sourceTree = "<group>"; };
+		E1EAB2E925D44CB0006C1C2A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E1EAB2EC25D44CC2006C1C2A /* CongklakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongklakViewController.swift; sourceTree = "<group>"; };
+		E1EAB2F425D45193006C1C2A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F959EF68C108BB70AFB571C /* Pods_CongklakIndonesiaGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12515C70B5CE5BA5284188A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C3C4F5A1A001EA63C85AE39 /* Pods-CongklakIndonesiaGame.debug.xcconfig */,
+				4B58FC5442F591C12C9FC55C /* Pods-CongklakIndonesiaGame.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C20E403CC4358D7464841A81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CBC9C8B596F1D7612C1A2D8 /* Pods_CongklakIndonesiaGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E169633525D54C620027164E /* Support File */ = {
+			isa = PBXGroup;
+			children = (
+				E1C69FF725D3E58300571ED3 /* LaunchScreen.storyboard */,
+				E1EAB2F425D45193006C1C2A /* Constant.swift */,
+				E1C69FEC25D3E58100571ED3 /* AppDelegate.swift */,
+				E1C69FEE25D3E58100571ED3 /* SceneDelegate.swift */,
+			);
+			path = "Support File";
+			sourceTree = "<group>";
+		};
 		E1C69FE025D3E58100571ED3 = {
 			isa = PBXGroup;
 			children = (
 				E1C69FEB25D3E58100571ED3 /* CongklakIndonesiaGame */,
 				E1C69FEA25D3E58100571ED3 /* Products */,
+				12515C70B5CE5BA5284188A8 /* Pods */,
+				C20E403CC4358D7464841A81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +111,54 @@
 		E1C69FEB25D3E58100571ED3 /* CongklakIndonesiaGame */ = {
 			isa = PBXGroup;
 			children = (
-				E1C69FEC25D3E58100571ED3 /* AppDelegate.swift */,
-				E1C69FEE25D3E58100571ED3 /* SceneDelegate.swift */,
-				E1C69FF025D3E58100571ED3 /* ViewController.swift */,
-				E1C69FF225D3E58100571ED3 /* Main.storyboard */,
+				E1EAB2F225D44D03006C1C2A /* Model */,
+				E1EAB2F125D44D00006C1C2A /* View */,
+				E1EAB2F025D44CFD006C1C2A /* Presenter */,
 				E1C69FF525D3E58300571ED3 /* Assets.xcassets */,
-				E1C69FF725D3E58300571ED3 /* LaunchScreen.storyboard */,
 				E1C69FFA25D3E58300571ED3 /* Info.plist */,
+				E1EAB2E425D445F9006C1C2A /* Lottie JSON */,
+				E169633525D54C620027164E /* Support File */,
 			);
 			path = CongklakIndonesiaGame;
+			sourceTree = "<group>";
+		};
+		E1EAB2E425D445F9006C1C2A /* Lottie JSON */ = {
+			isa = PBXGroup;
+			children = (
+				E169635225D679920027164E /* WinAnimation.json */,
+				E1EAB2CC25D3F516006C1C2A /* LaunchAnimation.json */,
+			);
+			path = "Lottie JSON";
+			sourceTree = "<group>";
+		};
+		E1EAB2F025D44CFD006C1C2A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E169634C25D5705B0027164E /* CongklakPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		E1EAB2F125D44D00006C1C2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1C69FF225D3E58100571ED3 /* Main.storyboard */,
+				E1EAB2E925D44CB0006C1C2A /* HomeViewController.swift */,
+				E1EAB2EC25D44CC2006C1C2A /* CongklakViewController.swift */,
+				E1C69FF025D3E58100571ED3 /* LaunchViewController.swift */,
+				E169634F25D677210027164E /* GameResult.swift */,
+				E182B2CB25D52F420091FCA9 /* SlotCongklakPlayer1.swift */,
+				E169633025D545730027164E /* SlotCongklakPlayer2.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E1EAB2F225D44D03006C1C2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E169634425D56FCA0027164E /* CongklakModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1C69FFD25D3E58300571ED3 /* Build configuration list for PBXNativeTarget "CongklakIndonesiaGame" */;
 			buildPhases = (
+				25742CB710C77EB42DAE23B3 /* [CP] Check Pods Manifest.lock */,
 				E1C69FE525D3E58100571ED3 /* Sources */,
 				E1C69FE625D3E58100571ED3 /* Frameworks */,
 				E1C69FE725D3E58100571ED3 /* Resources */,
+				E2EAC772A3D4FD139AEFA983 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,19 +223,71 @@
 				E1C69FF925D3E58300571ED3 /* LaunchScreen.storyboard in Resources */,
 				E1C69FF625D3E58300571ED3 /* Assets.xcassets in Resources */,
 				E1C69FF425D3E58100571ED3 /* Main.storyboard in Resources */,
+				E169635325D679920027164E /* WinAnimation.json in Resources */,
+				E1EAB2CF25D3F516006C1C2A /* LaunchAnimation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25742CB710C77EB42DAE23B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CongklakIndonesiaGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2EAC772A3D4FD139AEFA983 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CongklakIndonesiaGame/Pods-CongklakIndonesiaGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CongklakIndonesiaGame/Pods-CongklakIndonesiaGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CongklakIndonesiaGame/Pods-CongklakIndonesiaGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E1C69FE525D3E58100571ED3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1C69FF125D3E58100571ED3 /* ViewController.swift in Sources */,
+				E1EAB2F525D45193006C1C2A /* Constant.swift in Sources */,
+				E1EAB2ED25D44CC2006C1C2A /* CongklakViewController.swift in Sources */,
+				E182B2CC25D52F420091FCA9 /* SlotCongklakPlayer1.swift in Sources */,
+				E1EAB2EA25D44CB0006C1C2A /* HomeViewController.swift in Sources */,
+				E169634D25D5705B0027164E /* CongklakPresenter.swift in Sources */,
+				E169634525D56FCA0027164E /* CongklakModel.swift in Sources */,
+				E1C69FF125D3E58100571ED3 /* LaunchViewController.swift in Sources */,
 				E1C69FED25D3E58100571ED3 /* AppDelegate.swift in Sources */,
+				E169633125D545730027164E /* SlotCongklakPlayer2.swift in Sources */,
 				E1C69FEF25D3E58100571ED3 /* SceneDelegate.swift in Sources */,
+				E169635025D677210027164E /* GameResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +431,7 @@
 		};
 		E1C69FFE25D3E58300571ED3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C3C4F5A1A001EA63C85AE39 /* Pods-CongklakIndonesiaGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -296,12 +445,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.elfa.CongklakIndonesiaGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		E1C69FFF25D3E58300571ED3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B58FC5442F591C12C9FC55C /* Pods-CongklakIndonesiaGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,7 +465,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.elfa.CongklakIndonesiaGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,0 +1,6 @@
+framework module Pods_CongklakIndonesiaGame {
+  umbrella header "Pods-CongklakIndonesiaGame-umbrella.h"
+
+  export *
+  module * { export * }
+}

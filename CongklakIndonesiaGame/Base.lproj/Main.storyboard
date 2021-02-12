@@ -1,24 +1,587 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Launch View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LaunchViewController" customModule="CongklakIndonesiaGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <segue destination="7f0-ty-wfi" kind="presentation" identifier="HomeViewController" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="67F-4F-ueP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-146" y="99"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Bb7-ez-a4U">
+            <objects>
+                <viewController id="7f0-ty-wfi" customClass="HomeViewController" customModule="CongklakIndonesiaGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="95b-cJ-i4s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="UER-nE-TZH">
+                                <rect key="frame" x="0.0" y="-30" width="414" height="926"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWX-fy-7XI">
+                                <rect key="frame" x="31" y="391" width="353" height="213"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKU-fu-PCc">
+                                        <rect key="frame" x="26" y="10" width="300" height="70"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="0uh-l6-o1p">
+                                                <rect key="frame" x="0.0" y="13" width="298" height="80"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfc-Uv-maT">
+                                                <rect key="frame" x="-2" y="26" width="302" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Start Game">
+                                                    <color key="titleColor" red="0.37647059560000001" green="0.2901961207" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="94p-N0-jaQ" kind="presentation" identifier="Congklak" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="USf-C6-J4O"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="2GA-qr-zin"/>
+                                            <constraint firstAttribute="height" constant="70" id="9k5-wd-nTK"/>
+                                            <constraint firstItem="0uh-l6-o1p" firstAttribute="centerX" secondItem="vfc-Uv-maT" secondAttribute="centerX" id="DsI-Za-ko6"/>
+                                            <constraint firstItem="vfc-Uv-maT" firstAttribute="top" secondItem="qKU-fu-PCc" secondAttribute="top" constant="26" id="EaQ-PL-RJm"/>
+                                            <constraint firstItem="0uh-l6-o1p" firstAttribute="leading" secondItem="qKU-fu-PCc" secondAttribute="leading" id="G40-0E-nf8"/>
+                                            <constraint firstItem="0uh-l6-o1p" firstAttribute="top" secondItem="qKU-fu-PCc" secondAttribute="top" constant="13" id="NWa-Ty-OP3"/>
+                                            <constraint firstAttribute="bottom" secondItem="vfc-Uv-maT" secondAttribute="bottom" constant="14" id="TxG-ka-2ri"/>
+                                            <constraint firstAttribute="bottom" secondItem="0uh-l6-o1p" secondAttribute="bottom" constant="-23" id="ZnT-yX-13s"/>
+                                            <constraint firstAttribute="trailing" secondItem="vfc-Uv-maT" secondAttribute="trailing" id="Zo1-wn-bui"/>
+                                            <constraint firstItem="vfc-Uv-maT" firstAttribute="leading" relation="lessThanOrEqual" secondItem="qKU-fu-PCc" secondAttribute="leading" id="nYh-9k-RCu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215800000001" green="0.91372549530000002" blue="0.81960785390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="qKU-fu-PCc" firstAttribute="top" secondItem="MWX-fy-7XI" secondAttribute="top" constant="10" id="GPj-2y-TnA"/>
+                                    <constraint firstAttribute="trailing" secondItem="qKU-fu-PCc" secondAttribute="trailing" constant="27" id="RTV-gg-UDg"/>
+                                    <constraint firstAttribute="width" constant="353" id="Z3g-4D-ldq"/>
+                                    <constraint firstItem="qKU-fu-PCc" firstAttribute="leading" secondItem="MWX-fy-7XI" secondAttribute="leading" constant="26" id="iCo-gu-sgN"/>
+                                    <constraint firstAttribute="height" constant="213" id="ogt-sS-efe"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Congklak" translatesAutoresizingMaskIntoConstraints="NO" id="UOy-6k-zqa">
+                                <rect key="frame" x="71" y="139" width="273" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="Ou8-8p-HXs"/>
+                                    <constraint firstAttribute="height" constant="172" id="Wmg-7L-FxK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RcG-9x-N7E"/>
+                        <color key="backgroundColor" red="0.98039215800000001" green="0.91372549530000002" blue="0.81960785390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="UOy-6k-zqa" firstAttribute="top" secondItem="RcG-9x-N7E" secondAttribute="top" constant="95" id="3h5-5D-r3I"/>
+                            <constraint firstItem="RcG-9x-N7E" firstAttribute="trailing" secondItem="MWX-fy-7XI" secondAttribute="trailing" constant="30" id="4HW-Tr-x0a"/>
+                            <constraint firstItem="MWX-fy-7XI" firstAttribute="leading" secondItem="RcG-9x-N7E" secondAttribute="leading" constant="31" id="ETp-KR-PTT"/>
+                            <constraint firstItem="UOy-6k-zqa" firstAttribute="leading" secondItem="RcG-9x-N7E" secondAttribute="leading" constant="71" id="POI-R9-D8D"/>
+                            <constraint firstItem="RcG-9x-N7E" firstAttribute="trailing" secondItem="UOy-6k-zqa" secondAttribute="trailing" constant="70" id="Pqt-iF-9CZ"/>
+                            <constraint firstItem="MWX-fy-7XI" firstAttribute="top" secondItem="UOy-6k-zqa" secondAttribute="bottom" constant="80" id="XiV-01-PkN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cAT-hc-vKl"/>
+                    <connections>
+                        <outlet property="baseView" destination="MWX-fy-7XI" id="qz0-Xl-BSC"/>
+                        <outlet property="logoImage" destination="UOy-6k-zqa" id="a21-uB-jKl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ENJ-ZF-5HO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566.66666666666674" y="97.767857142857139"/>
+        </scene>
+        <!--Congklak View Controller-->
+        <scene sceneID="KhD-Y6-xFe">
+            <objects>
+                <viewController id="94p-N0-jaQ" customClass="CongklakViewController" customModule="CongklakIndonesiaGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uWg-5z-0jN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="pBI-23-Zo2" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQr-S1-yfq" userLabel="Header">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fjk-jD-P3I">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="124"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="iQ8-yD-tSs"/>
+                                            <constraint firstAttribute="height" constant="124" id="t5Q-cI-6sv"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEP-gb-9NR">
+                                        <rect key="frame" x="157" y="0.0" width="257" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yB-9y-9h2">
+                                                <rect key="frame" x="95" y="29" width="94" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="hcX-PJ-Iny"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90.5" id="v7J-O8-ZyO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7yB-9y-9h2" secondAttribute="trailing" constant="20" symbolic="YES" id="8g5-zi-iXF"/>
+                                            <constraint firstAttribute="bottom" secondItem="7yB-9y-9h2" secondAttribute="bottom" constant="41" id="Quh-D6-5j7"/>
+                                            <constraint firstItem="7yB-9y-9h2" firstAttribute="top" secondItem="TEP-gb-9NR" secondAttribute="top" constant="29" id="js1-Nx-RPv"/>
+                                            <constraint firstItem="7yB-9y-9h2" firstAttribute="leading" secondItem="TEP-gb-9NR" secondAttribute="leading" constant="95" id="sF7-Qr-hQi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstItem="fjk-jD-P3I" firstAttribute="leading" secondItem="AQr-S1-yfq" secondAttribute="leading" id="K4V-rI-qQR"/>
+                                    <constraint firstAttribute="trailing" secondItem="TEP-gb-9NR" secondAttribute="trailing" id="NTG-X8-IOc"/>
+                                    <constraint firstItem="TEP-gb-9NR" firstAttribute="top" secondItem="AQr-S1-yfq" secondAttribute="top" id="PHP-zx-xR7"/>
+                                    <constraint firstItem="TEP-gb-9NR" firstAttribute="leading" secondItem="fjk-jD-P3I" secondAttribute="trailing" constant="7" id="UIU-ep-W6P"/>
+                                    <constraint firstItem="fjk-jD-P3I" firstAttribute="top" secondItem="AQr-S1-yfq" secondAttribute="top" id="igu-G8-te7"/>
+                                    <constraint firstAttribute="bottom" secondItem="TEP-gb-9NR" secondAttribute="bottom" id="oeb-Aq-Pxi"/>
+                                    <constraint firstAttribute="height" constant="100" id="uR2-Ya-ccT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="got-hx-S2a" userLabel="Congklak">
+                                <rect key="frame" x="0.0" y="273" width="414" height="350"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D9O-Eb-gQl">
+                                        <rect key="frame" x="8" y="25" width="398" height="300"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSg-su-zpl" customClass="SlotCongklakPlayer1" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="120" width="40" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="euy-oh-D4n"/>
+                                                    <constraint firstAttribute="width" constant="40" id="goi-qA-1pk"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="t6w-EX-ciR"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g1N-xS-9sJ">
+                                                <rect key="frame" x="40" y="0.0" width="318" height="300"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NOd-Ri-pAR">
+                                                        <rect key="frame" x="4" y="0.0" width="310" height="150"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkv-yO-NWt" customClass="SlotCongklakPlayer2" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="cpO-t9-K8E"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="tZL-VV-Nq5"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="cJz-fC-VfA"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxW-NV-bnG" customClass="SlotCongklakPlayer2" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="45" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="8MG-2c-N9R"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="yq1-de-SFP"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="RIO-4y-PLt"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ch9-zg-yiQ" customClass="SlotCongklakPlayer2" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="90" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="jMp-UL-2Ee"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="qyc-4C-ovV"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="duJ-k3-WuV"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3k8-Sg-bPU" customClass="SlotCongklakPlayer2" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="135" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="F72-ke-bCu"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="UX5-tY-diN"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="11d-4o-rI3"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkZ-WZ-S5P" customClass="SlotCongklakPlayer2" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="180" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="lAY-l5-bbu"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="m9H-h9-A3g"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="DK3-hj-6ta"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoQ-tT-YBJ" customClass="SlotCongklakPlayer2" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="225" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="DYc-jq-9Zz"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="GHI-t6-B6F"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="9L0-qU-Y2Y"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFq-mM-Okt" customClass="SlotCongklakPlayer2" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="270" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="Z7X-YJ-0Ik"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="rKd-n0-Cij"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="55p-fn-Vg5"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Etc-hD-rgg">
+                                                        <rect key="frame" x="4" y="150" width="310" height="150"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ4-eq-jJl" customClass="SlotCongklakPlayer1" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="Nqd-g6-sjY"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="XhX-3U-P1d"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="bgQ-AA-ynh"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5S-25-vRd" customClass="SlotCongklakPlayer1" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="45" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="EgU-Ks-a6x"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="bxZ-JG-pxm"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="d0z-3H-Paq"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQn-hN-bcy" customClass="SlotCongklakPlayer1" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="90" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="D25-LM-LRz"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="f6q-bM-USk"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="Pp4-GK-FY5"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEP-pF-U6z" customClass="SlotCongklakPlayer1" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="135" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="8XT-Ax-fgd"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="JAW-pd-Hfu"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="LVU-Rh-v1x"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44C-Za-LRT" customClass="SlotCongklakPlayer1" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="180" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="iaJ-lz-d1L"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="qMt-Se-tGL"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="qXC-gg-ao5"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IJ-UB-Xeb" customClass="SlotCongklakPlayer1" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="225" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="VWA-9e-h3g"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="ka0-xl-qb6"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="Gd4-Wp-kvV"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBo-bg-NGh" customClass="SlotCongklakPlayer1" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                                <rect key="frame" x="270" y="55" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="CSP-mc-HLa"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="Sjh-EW-ck8"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="ell-ka-zus"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="SdF-lj-RXk"/>
+                                                </constraints>
+                                            </stackView>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPv-tK-hcJ" customClass="SlotCongklakPlayer2" customModule="CongklakIndonesiaGame" customModuleProvider="target">
+                                                <rect key="frame" x="358" y="120" width="40" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="QZA-J3-Wte"/>
+                                                    <constraint firstAttribute="width" constant="40" id="iYS-Q9-wtX"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="slotPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="VPt-ea-2Pt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="7wF-Ov-Qky"/>
+                                    <constraint firstAttribute="bottom" secondItem="D9O-Eb-gQl" secondAttribute="bottom" constant="25" id="XIU-JG-gxR"/>
+                                    <constraint firstAttribute="trailing" secondItem="D9O-Eb-gQl" secondAttribute="trailing" constant="8" id="YQ2-mg-78X"/>
+                                    <constraint firstItem="D9O-Eb-gQl" firstAttribute="leading" secondItem="got-hx-S2a" secondAttribute="leading" constant="8" id="mvp-XO-Bgn"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUI-OI-9zM" userLabel="Footer">
+                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXT-fy-Njn">
+                                        <rect key="frame" x="157" y="0.0" width="257" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21s-Wk-N3z">
+                                                <rect key="frame" x="95" y="29" width="90.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="21s-Wk-N3z" firstAttribute="top" secondItem="pXT-fy-Njn" secondAttribute="top" constant="29" id="1mE-R2-qxF"/>
+                                            <constraint firstItem="21s-Wk-N3z" firstAttribute="leading" secondItem="pXT-fy-Njn" secondAttribute="leading" constant="95" id="jAg-nJ-Yub"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="21s-Wk-N3z" secondAttribute="trailing" constant="20" symbolic="YES" id="wVB-bB-U7O"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zB1-y8-RLo">
+                                        <rect key="frame" x="0.0" y="-24" width="150" height="124"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="CNp-5c-vKu"/>
+                                            <constraint firstAttribute="height" constant="124" id="NdK-10-boK"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstItem="pXT-fy-Njn" firstAttribute="leading" secondItem="SUI-OI-9zM" secondAttribute="leading" constant="157" id="HPE-CC-ooh"/>
+                                    <constraint firstAttribute="bottom" secondItem="zB1-y8-RLo" secondAttribute="bottom" id="HPg-fF-iq0"/>
+                                    <constraint firstItem="pXT-fy-Njn" firstAttribute="top" secondItem="SUI-OI-9zM" secondAttribute="top" id="OJc-dI-Fb5"/>
+                                    <constraint firstItem="zB1-y8-RLo" firstAttribute="leading" secondItem="SUI-OI-9zM" secondAttribute="leading" id="h4y-fZ-Ndl"/>
+                                    <constraint firstAttribute="bottom" secondItem="pXT-fy-Njn" secondAttribute="bottom" id="pTa-rs-IOh"/>
+                                    <constraint firstAttribute="trailing" secondItem="pXT-fy-Njn" secondAttribute="trailing" id="rC7-VB-2aL"/>
+                                    <constraint firstAttribute="height" constant="100" id="rtI-EP-91w"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vEF-LA-PFd">
+                                <rect key="frame" x="0.0" y="697" width="414" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vZG-zL-l32">
+                                        <rect key="frame" x="20" y="20" width="388" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-Kq-Bcl">
+                                                <rect key="frame" x="0.0" y="0.0" width="194" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s91-pD-cSj">
+                                                        <rect key="frame" x="0.0" y="3" width="87" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title=" Exit">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <imageReference key="image" image="x.circle" catalog="system" symbolScale="large"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="exitPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="GIg-yw-VOt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Tn-RK-Hyj">
+                                                        <rect key="frame" x="87" y="2.5" width="107" height="25.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title=" Reset">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <imageReference key="image" image="arrow.clockwise" catalog="system" symbolScale="large"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="resetPressed:" destination="94p-N0-jaQ" eventType="touchUpInside" id="1k9-50-Sfv"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold marble: 0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qW2-Az-ZL0">
+                                                <rect key="frame" x="194" y="0.0" width="194" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vZG-zL-l32" firstAttribute="leading" secondItem="vEF-LA-PFd" secondAttribute="leading" constant="20" symbolic="YES" id="DNL-p4-xaJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="vZG-zL-l32" secondAttribute="trailing" constant="6" id="Djf-uF-bAv"/>
+                                    <constraint firstItem="vZG-zL-l32" firstAttribute="top" secondItem="vEF-LA-PFd" secondAttribute="top" constant="20" symbolic="YES" id="fVp-l3-FWE"/>
+                                    <constraint firstAttribute="height" constant="70" id="k55-Oc-Dbj"/>
+                                    <constraint firstAttribute="bottom" secondItem="vZG-zL-l32" secondAttribute="bottom" constant="20" symbolic="YES" id="ljG-CZ-nFh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdH-s5-HTy">
+                                <rect key="frame" x="0.0" y="123" width="414" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold marble: 0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKJ-pV-EfF">
+                                        <rect key="frame" x="32" y="20" width="179" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gKJ-pV-EfF" firstAttribute="leading" secondItem="KdH-s5-HTy" secondAttribute="leading" constant="32" id="2xn-sY-UnA"/>
+                                    <constraint firstAttribute="height" constant="70" id="Bq3-qw-ytf"/>
+                                    <constraint firstAttribute="bottom" secondItem="gKJ-pV-EfF" secondAttribute="bottom" constant="20" symbolic="YES" id="LeW-aZ-Fne"/>
+                                    <constraint firstItem="gKJ-pV-EfF" firstAttribute="top" secondItem="KdH-s5-HTy" secondAttribute="top" constant="20" symbolic="YES" id="OKp-z1-hZp"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gKJ-pV-EfF" secondAttribute="trailing" constant="203" id="rgA-mD-dc7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CYw-qp-cDH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AQr-S1-yfq" firstAttribute="top" secondItem="uWg-5z-0jN" secondAttribute="top" id="0LI-Uk-jfM"/>
+                            <constraint firstItem="KdH-s5-HTy" firstAttribute="top" secondItem="AQr-S1-yfq" secondAttribute="bottom" constant="23" id="48q-AT-byj"/>
+                            <constraint firstItem="vEF-LA-PFd" firstAttribute="leading" secondItem="CYw-qp-cDH" secondAttribute="leading" id="6zP-d9-bJW"/>
+                            <constraint firstAttribute="trailing" secondItem="vEF-LA-PFd" secondAttribute="trailing" id="7y5-Xx-eeA"/>
+                            <constraint firstAttribute="trailing" secondItem="pBI-23-Zo2" secondAttribute="trailing" id="8Pl-97-7DE"/>
+                            <constraint firstItem="got-hx-S2a" firstAttribute="leading" secondItem="CYw-qp-cDH" secondAttribute="leading" id="AmR-0W-Ekq"/>
+                            <constraint firstAttribute="bottom" secondItem="SUI-OI-9zM" secondAttribute="bottom" id="Kdq-CW-Vds"/>
+                            <constraint firstItem="AQr-S1-yfq" firstAttribute="leading" secondItem="CYw-qp-cDH" secondAttribute="leading" id="LD4-gm-ylw"/>
+                            <constraint firstItem="pBI-23-Zo2" firstAttribute="top" secondItem="uWg-5z-0jN" secondAttribute="top" id="O0f-o2-Fl8"/>
+                            <constraint firstItem="got-hx-S2a" firstAttribute="centerY" secondItem="uWg-5z-0jN" secondAttribute="centerY" id="RVp-6K-Jau"/>
+                            <constraint firstItem="SUI-OI-9zM" firstAttribute="leading" secondItem="CYw-qp-cDH" secondAttribute="leading" id="SHN-rP-TiV"/>
+                            <constraint firstItem="pBI-23-Zo2" firstAttribute="leading" secondItem="uWg-5z-0jN" secondAttribute="leading" id="Ua3-CY-K0O"/>
+                            <constraint firstItem="SUI-OI-9zM" firstAttribute="top" secondItem="uWg-5z-0jN" secondAttribute="bottom" constant="-100" id="VEx-mj-56X"/>
+                            <constraint firstItem="AQr-S1-yfq" firstAttribute="trailing" secondItem="CYw-qp-cDH" secondAttribute="trailing" id="Yos-To-BfT"/>
+                            <constraint firstItem="SUI-OI-9zM" firstAttribute="trailing" secondItem="CYw-qp-cDH" secondAttribute="trailing" id="byx-cR-IZZ"/>
+                            <constraint firstItem="got-hx-S2a" firstAttribute="trailing" secondItem="CYw-qp-cDH" secondAttribute="trailing" id="g4m-Tk-0dE"/>
+                            <constraint firstItem="KdH-s5-HTy" firstAttribute="trailing" secondItem="CYw-qp-cDH" secondAttribute="trailing" id="hET-YF-jO2"/>
+                            <constraint firstAttribute="bottom" secondItem="pBI-23-Zo2" secondAttribute="bottom" id="kFk-XA-UiM"/>
+                            <constraint firstItem="KdH-s5-HTy" firstAttribute="leading" secondItem="CYw-qp-cDH" secondAttribute="leading" id="lmj-b7-NIV"/>
+                            <constraint firstItem="SUI-OI-9zM" firstAttribute="top" secondItem="vEF-LA-PFd" secondAttribute="bottom" constant="29" id="q8R-Et-cAj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="footer" destination="SUI-OI-9zM" id="jqT-4L-NmK"/>
+                        <outlet property="header" destination="AQr-S1-yfq" id="N8V-yF-OXo"/>
+                        <outlet property="holdMarblePlayer1" destination="qW2-Az-ZL0" id="kLV-J3-jHm"/>
+                        <outlet property="holdMarblePlayer2" destination="gKJ-pV-EfF" id="Ro8-tW-oKd"/>
+                        <outlet property="player1Image" destination="zB1-y8-RLo" id="YHD-d0-8L1"/>
+                        <outlet property="player2Image" destination="fjk-jD-P3I" id="L4r-Gd-P9E"/>
+                        <segue destination="35H-7R-c9F" kind="presentation" identifier="GameResult" id="vjD-lc-psb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUa-Ss-YTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279.7101449275362" y="97.767857142857139"/>
+        </scene>
+        <!--Game Result-->
+        <scene sceneID="TU4-AS-9L0">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="35H-7R-c9F" customClass="GameResult" customModule="CongklakIndonesiaGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iqP-Pk-elv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blZ-C2-J9y">
+                                <rect key="frame" x="20" y="321" width="374" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0x-z6-asG">
+                                        <rect key="frame" x="159" y="85" width="56.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="l0x-z6-asG" firstAttribute="centerY" secondItem="blZ-C2-J9y" secondAttribute="centerY" id="9cP-PL-Hki"/>
+                                    <constraint firstAttribute="width" constant="374" id="AFk-Xr-ZvA"/>
+                                    <constraint firstItem="l0x-z6-asG" firstAttribute="centerX" secondItem="blZ-C2-J9y" secondAttribute="centerX" id="cF5-U9-38i"/>
+                                    <constraint firstAttribute="height" constant="200" id="lfX-BO-OWH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WO5-OY-WbM"/>
+                        <color key="backgroundColor" red="0.99215686319999996" green="0.90588235859999999" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="blZ-C2-J9y" firstAttribute="centerX" secondItem="iqP-Pk-elv" secondAttribute="centerX" id="9Um-Bg-Lb3"/>
+                            <constraint firstItem="blZ-C2-J9y" firstAttribute="centerY" secondItem="iqP-Pk-elv" secondAttribute="centerY" id="Ery-Bm-svc"/>
+                            <constraint firstItem="WO5-OY-WbM" firstAttribute="trailing" secondItem="blZ-C2-J9y" secondAttribute="trailing" constant="20" id="ebR-2Z-YvX"/>
+                            <constraint firstItem="blZ-C2-J9y" firstAttribute="leading" secondItem="WO5-OY-WbM" secondAttribute="leading" constant="20" id="se9-2e-Pbh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="baseView" destination="blZ-C2-J9y" id="Y7E-nR-vRB"/>
+                        <outlet property="textLabel" destination="l0x-z6-asG" id="rwE-H4-KIf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LT5-5j-5zg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2028.985507246377" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Congklak" width="1019" height="661"/>
+        <image name="Wallpaper" width="960" height="600"/>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="textfield" width="298" height="93"/>
+        <image name="x.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

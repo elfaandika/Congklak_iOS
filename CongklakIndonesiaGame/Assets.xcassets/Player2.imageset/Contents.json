@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "%E2%80%94Pngtree%E2%80%94hand%20painted%20q%20version%20character_3959297.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "%E2%80%94Pngtree%E2%80%94hand%20painted%20q%20version%20character_3959297-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "%E2%80%94Pngtree%E2%80%94hand%20painted%20q%20version%20character_3959297-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
